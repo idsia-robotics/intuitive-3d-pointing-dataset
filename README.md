@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/268146753.svg)](https://zenodo.org/badge/latestdoi/268146753)
+
 # Intuitive 3D Control of a Quadrotor in User Proximity with Pointing Gestures (Dataset)
 
 The accompanying dataset and code for the ICRA 2020 publication:

@@ -8,10 +8,10 @@ The dataset contains a log of user actions and states of the system collected du
 
 ## Authors
 
-Boris Gromov (ORCiD: https://orcid.org/0000-0003-2380-483X)
-Jérôme Guzzi (ORCiD: https://orcid.org/0000-0002-1263-4110)
-Luca Gambardella
-Alessandro Giusti
+- Boris Gromov (ORCiD: https://orcid.org/0000-0003-2380-483X)
+- Jérôme Guzzi (ORCiD: https://orcid.org/0000-0002-1263-4110)
+- Luca Gambardella
+- Alessandro Giusti
 
 ## Date of collection
 
@@ -19,30 +19,30 @@ February 2019
 
 ## Files
 
-### `icra2020_data_processing.ipynb`
+ 1. `icra2020_data_processing.ipynb`
 
-The file is an IPython (Jupyter) Notebook that contains an example code to process the data. The code can be used to reproduce the results presented in the paper.
+    The file is an IPython (Jupyter) Notebook that contains an example code to process the data. The code can be used to reproduce the results presented in the paper.
 
-### `icra2020_complete_anonymized.pkl`
+ 2. `icra2020_complete_anonymized.pkl`
 
-The file is encoded using the standard Python `pickle` library and represents a Python dictionary with the following keys:
+    The file is encoded using the standard Python `pickle` library and represents a Python dictionary with the following keys:
 
- - `data` A `pandas.DataFrame` indexed by time, contains the following columns:
-   - `gt_x`, `gt_y`, `gt_z` Position of the quadrotor acquired with a MOCAP system;
-   - `h_x`, `h_y`, `h_z` Position of the user's head acquired with a MOCAP system;
-   - `p_x`, `p_y` Pointed-at location on the ground plane;
+    - `data` A `pandas.DataFrame` indexed by time, contains the following columns:
+      - `gt_x`, `gt_y`, `gt_z` Position of the quadrotor acquired with a MOCAP system;
+      - `h_x`, `h_y`, `h_z` Position of the user's head acquired with a MOCAP system;
+      - `p_x`, `p_y` Pointed-at location on the ground plane;
 
- - `moves` A `pandas.DataFrame` indexed by time, provides time indices to slice `data`. Contains the following columns:
-   - `user_id` Anonymized user ID (string);
-   - `session_id` Session ID (integer);
-   - `interface` Type of interface used (string), either `POINTING` or `JOYSTICK`;
-   - `target` Target ID (integer), see `targets` below;
-   - `t0`, `t1` Time indices of the start and the end of the segment flown to `target`;
-   - `duration` Time passed between `t0` and `t1`;
+    - `moves` A `pandas.DataFrame` indexed by time, provides time indices to slice `data`. Contains the following columns:
+      - `user_id` Anonymized user ID (string);
+      - `session_id` Session ID (integer);
+      - `interface` Type of interface used (string), either `POINTING` or `JOYSTICK`;
+      - `target` Target ID (integer), see `targets` below;
+      - `t0`, `t1` Time indices of the start and the end of the segment flown to `target`;
+      - `duration` Time passed between `t0` and `t1`;
 
- - `shapes` A list of `pandas.DataFrame`. Each data frame is indexed by time and corresponds to a `POINTING` session in the `moves` data frame (see above). Each data frame has a single column `ws_shape` (string) and can take either `WORKSPACE_CYLINDER` or `WORKSPACE_XY_PLANE` value.
+    - `shapes` A list of `pandas.DataFrame`. Each data frame is indexed by time and corresponds to a `POINTING` session in the `moves` data frame (see above). Each data frame has a single column `ws_shape` (string) and can take either `WORKSPACE_CYLINDER` or `WORKSPACE_XY_PLANE` value.
 
- - `target` A `pandas.DataFrame` indexed by the target ID. Contains corresponding `x`, `y`, and `z` coordinates of the targets.
+    - `target` A `pandas.DataFrame` indexed by the target ID. Contains corresponding `x`, `y`, and `z` coordinates of the targets.
 
 ## License
 

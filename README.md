@@ -13,7 +13,7 @@ The dataset contains a log of user actions and states of the system collected du
 - Boris Gromov (ORCiD: https://orcid.org/0000-0003-2380-483X)
 - Jérôme Guzzi (ORCiD: https://orcid.org/0000-0002-1263-4110)
 - Luca Gambardella
-- Alessandro Giusti
+- Alessandro Giusti (ORCiD: https://orcid.org/0000-0003-1240-0768)
 
 ## Date of collection
 
